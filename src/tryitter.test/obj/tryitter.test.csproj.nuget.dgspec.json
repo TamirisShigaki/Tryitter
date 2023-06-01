@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/tryitter.test/tryitter.test.csproj": {}
+    "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter.test/tryitter.test.csproj": {}
   },
   "projects": {
-    "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/tryitter.test/tryitter.test.csproj": {
+    "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter.test/tryitter.test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/tryitter.test/tryitter.test.csproj",
+        "projectUniqueName": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter.test/tryitter.test.csproj",
         "projectName": "tryitter.test",
-        "projectPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/tryitter.test/tryitter.test.csproj",
+        "projectPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter.test/tryitter.test.csproj",
         "packagesPath": "/home/shigaki/.nuget/packages/",
-        "outputPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/tryitter.test/obj/",
+        "outputPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter.test/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/shigaki/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/tryitter/tryitter.csproj": {
-                "projectPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/tryitter/tryitter.csproj"
+              "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/tryitter.csproj": {
+                "projectPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/tryitter.csproj"
               }
             }
           }
@@ -46,9 +46,33 @@
               "target": "Package",
               "version": "[6.5.1, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.1.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.4, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -87,14 +111,14 @@
         }
       }
     },
-    "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/tryitter/tryitter.csproj": {
+    "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/tryitter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/tryitter/tryitter.csproj",
+        "projectUniqueName": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/tryitter.csproj",
         "projectName": "tryitter",
-        "projectPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/tryitter/tryitter.csproj",
+        "projectPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/tryitter.csproj",
         "packagesPath": "/home/shigaki/.nuget/packages/",
-        "outputPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/tryitter/obj/",
+        "outputPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/shigaki/.nuget/NuGet/NuGet.Config"
@@ -121,6 +145,26 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
