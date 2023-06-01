@@ -1,12 +1,20 @@
-namespace tryitter.Models
+using System.ComponentModel.DataAnnotations;
+
+namespace tryitter.Models;
+public class Student
 {
-    public class Studant
-    {
-        public int StudantId { get; set; }
-        public string StudantName { get; set; }
-        public string Email { get; set; }
-        public string CurrentModel { get; set; }
-        public string Password { get; set; }
-        public Post Post { get; set; }
-    }
+    [Key]
+    public int StudentId { get; set; }
+
+    public string Name { get; set; } = default!;
+
+    public string Email { get; set; } = default!;
+
+    public string Password { get; set; } = default!;
+
+    public string Status { get; set; } = default!;
+
+    public virtual ICollection<Post>? Posts { get; set; }
 }
+
+// * default! = define o valor inicial da propriedade para o valor padrão do tipo
