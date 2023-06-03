@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/tryitter.csproj": {}
+    "C:\\Users\\joaocla\\Source\\Repos\\Tryitter\\src\\tryitter\\tryitter.csproj": {}
   },
   "projects": {
-    "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/tryitter.csproj": {
+    "C:\\Users\\joaocla\\Source\\Repos\\Tryitter\\src\\tryitter\\tryitter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/tryitter.csproj",
+        "projectUniqueName": "C:\\Users\\joaocla\\Source\\Repos\\Tryitter\\src\\tryitter\\tryitter.csproj",
         "projectName": "tryitter",
-        "projectPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/tryitter.csproj",
-        "packagesPath": "/home/shigaki/.nuget/packages/",
-        "outputPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/obj/",
+        "projectPath": "C:\\Users\\joaocla\\Source\\Repos\\Tryitter\\src\\tryitter\\tryitter.csproj",
+        "packagesPath": "C:\\Users\\joaocla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joaocla\\Source\\Repos\\Tryitter\\src\\tryitter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/shigaki/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\joaocla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -96,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
