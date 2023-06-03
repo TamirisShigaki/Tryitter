@@ -29,5 +29,14 @@ namespace tryitter.Controllers
             if(response.Count() == 0) return NotFound();
             return Ok(response);
         }
+
+        [HttpGet]
+        [Route("/GetLastPost/{id}")]
+        public IActionResult GetLastPostByStudentId(int id)
+        {
+            var response = _repository.GetLastPost(id);
+            if (response == null) return NotFound();
+            return Ok(response);
+        }
     }
 }
