@@ -108,3 +108,4 @@
 /home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/obj/Debug/net6.0/tryitter.pdb
 /home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/obj/Debug/net6.0/tryitter.genruntimeconfig.cache
 /home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/obj/Debug/net6.0/ref/tryitter.dll
+/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
