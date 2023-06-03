@@ -22,7 +22,11 @@ public class StudentController : ControllerBase
     public IActionResult CreateStudent(Student student)
     {
         var response = _repository.AddStudent(student);
-        if (response == "Email already exists") return BadRequest(response);
+        if (response == "Email already exists")
+        {
+            return BadRequest(response);
+        }
+
         return Ok(response);
     }
 
@@ -43,7 +47,11 @@ public class StudentController : ControllerBase
     public IActionResult UpdateStudent(int id, Student student)
     {
         var response = _repository.UpdateStudent(id, student);
-        if (response == "Email already exists") return BadRequest(response);
+        if (response == "Email already exists")
+        {
+            return BadRequest(response);
+        }
+
         return Ok(response);
     }
 
@@ -54,7 +62,7 @@ public class StudentController : ControllerBase
     {
         if (_repository.GetStudentById(id) == null)
         {
-            return BadRequest("student not found");
+            return BadRequest("Student not found");
         }
 
         var student = _repository.GetStudentById(id);
@@ -78,7 +86,7 @@ public class StudentController : ControllerBase
             return Ok(studentResult);
         }
 
-        return BadRequest("student not found");
+        return BadRequest("Student not found");
     }
 
     [HttpGet("Name")]
