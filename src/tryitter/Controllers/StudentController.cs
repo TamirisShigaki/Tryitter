@@ -29,8 +29,13 @@ public class StudentController : ControllerBase
     [HttpPost("/Login")]
     public IActionResult Login(StudentLogin studentlogin)
     {
-        var token = _repository.Login(studentlogin);
-        return Ok(token);
+        var response = _repository.Login(studentlogin);
+        if (response == "Student not found")
+        {
+            return BadRequest(response);
+        }
+
+        return Ok(response);
     }
 
     [HttpPut("{id}")]

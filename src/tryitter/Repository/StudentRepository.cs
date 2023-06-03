@@ -39,11 +39,17 @@ namespace tryitter.Repository
         // * Loga com um estudante e retorna o token
         public string Login(StudentLogin studentLogin)
         {
-            var studentdb = GetStudent(studentLogin.Name);
-            if (studentdb.Name == studentLogin.Name && new Hash(SHA512.Create()).VerificarSenha(studentLogin.Password, studentdb.Password))
+            var studentdb = _context.Students.AsNoTracking().Where(c => c.Email == studentLogin.Email).FirstOrDefault();
+            if (studentdb == null)
+            {
+                return "Student not found";
+            }
+
+            if (studentdb.Email == studentLogin.Email && new Hash(SHA512.Create()).VerificarSenha(studentLogin.Password, studentdb.Password))
             {
                 return new TokenGenerator().Generate(studentdb);
             }
+
             return "Student not found";
         }
 
