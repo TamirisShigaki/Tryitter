@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y3v4Qk66p6XHt2VR51q6Eqp0EPzhRQX9UQvSb8ea4JmG/3j+EyQbg5/WwXX4H8nTV/Ykz9NPiCp2pSG1rmG8Jg==",
+  "dgSpecHash": "Tl9T4L6g5uDsH+aj32hflC2fVa/dRUb4aNg3002VW2KTkkW7KX6VtJJFtpaybs5ENp5zBp47zYhtX4KRDxEg1A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\joaocla\\Source\\Repos\\Tryitter\\src\\tryitter\\tryitter.csproj",
+  "projectFilePath": "C:\\Users\\joaocla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joaocla\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\joaocla\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

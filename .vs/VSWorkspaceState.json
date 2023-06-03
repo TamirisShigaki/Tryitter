@@ -4,12 +4,9 @@
     "\\src",
     "\\src\\tryitter",
     "\\src\\tryitter\\Controllers",
-    "\\src\\tryitter\\Entities",
-    "\\src\\tryitter\\Migrations",
     "\\src\\tryitter\\Models",
-    "\\src\\tryitter\\Repository",
-    "\\src\\tryitter\\Services"
+    "\\src\\tryitter\\Repository"
   ],
-  "SelectedNode": "\\src\\tryitter\\Models\\Post.cs",
+  "SelectedNode": "\\src\\tryitter",
   "PreviewInSolutionExplorer": false
 }

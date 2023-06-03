@@ -14,7 +14,7 @@ public class Post
 
     public DateTime UpdatetAt { get; set; }
 
-    public byte[] Image { get; set; }
+    public byte[]? Image { get; set; }
 
     [ForeignKey("StudentId")]
     public int StudentId { get; set; }

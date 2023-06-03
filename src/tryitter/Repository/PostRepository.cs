@@ -24,7 +24,7 @@ namespace tryitter.Repository
                 CreatAt = DateTime.Now,
                 Image = postInput.Image,
                 StudentId = postInput.StudentId,
-                UpdatetAt = null
+                UpdatetAt = DateTime.Now
             };
             _context.Posts.Add(newPost);
             _context.SaveChanges();
