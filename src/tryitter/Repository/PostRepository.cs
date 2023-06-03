@@ -34,7 +34,7 @@ namespace tryitter.Repository
         }
 
         // * Lista todos os posts de um aluno procurando pelo Id
-        public IEnumerable<Post> GetAll(int studentid)
+        public IEnumerable<Post> GetAllPostsByStudentId(int studentid)
         {
             List<Post> posts = new List<Post>();
             posts = _context.Posts.Where(x => x.StudentId == studentid).ToList();

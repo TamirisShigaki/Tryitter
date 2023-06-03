@@ -15,11 +15,18 @@ namespace tryitter.Controllers
             _repository = repository;
         }
 
-        [HttpPost]
-        [Route("/posts")]
+        [HttpPost("/Posts")]
         public IActionResult CreatePost(Post post)
         {
             var response = _repository.AddPost(post);
+            return Ok(response);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetPostsByStudentId(int id)
+        {
+            var response = _repository.GetAllPostsByStudentId(id);
+            if(response.Count() == 0) return NotFound();
             return Ok(response);
         }
     }
