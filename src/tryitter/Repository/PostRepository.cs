@@ -1,5 +1,7 @@
+using System.Data.SqlTypes;
 using System.Security.Cryptography;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 using tryitter.Entities;
 using tryitter.Models;
 using tryitter.Services;
@@ -31,89 +33,19 @@ namespace tryitter.Repository
             return "post created";
         }
 
-        // * Loga com um estudante e retorna o token
-        public string Login(StudentLogin studentLogin)
+        // * Lista todos os posts de um aluno procurando pelo Id
+        public IEnumerable<Post> GetAll(int studentid)
         {
-            var studentdb = _context.Students.AsNoTracking().Where(c => c.Email == studentLogin.Email).FirstOrDefault();
-            if (studentdb == null)
-            {
-                return "Student not found";
-            }
-
-            if (studentdb.Email == studentLogin.Email && new Hash(SHA512.Create()).VerificarSenha(studentLogin.Password, studentdb.Password))
-            {
-                return new TokenGenerator().Generate(studentdb);
-            }
-
-            return "Student not found";
+            List<Post> posts = new List<Post>();
+            posts = _context.Posts.Where(x => x.StudentId == studentid).ToList();
+            return posts;
         }
 
-        // * Depois de verificar se o e-mail informado não existe no DB. E se o estudante se o estudante que esta sendo atualizado for o mesmo, atualiza o cadastro do estudante
-        public string UpdateStudent(int id, Student studentInput)
+        // * Lista o ultimo post de um aluno procurando pelo Id
+        public Post GetLastPost(int studentid)
         {
-            var currentStateofStudent = _context.Students.AsNoTracking().Where(c => c.StudentId == id).FirstOrDefault();
-            var hasStudantWithThisEmail = _context.Students.AsNoTracking().Where(c => c.Email == studentInput.Email).FirstOrDefault();
-
-            if (currentStateofStudent.Email != studentInput.Email && hasStudantWithThisEmail != null)
-            {
-                return "Email already exists";
-            }
-
-            var student = new Student
-            {
-                StudentId = id,
-                Name = studentInput.Name,
-                Email = studentInput.Email,
-                Status = studentInput.Status,
-                Password = new Hash(SHA512.Create()).CriptografarSenha(studentInput.Password),
-            };
-            _context.Students.Update(student);
-            _context.SaveChanges();
-            return "Student updated";
-        }
-
-        // *  exclui o estudante e post relacionados (Cascate)
-        public string DeleteStudent(Student student)
-        {
-            var posts = _context.Posts.Where(p => p.StudentId == student.StudentId);
-            _context.Students.Remove(student);
-            _context.Posts.RemoveRange(posts);
-            _context.SaveChanges();
-            return "student remove";
-        }
-
-        // * retorna o estudante pelo nome
-        public Student GetStudent(string name)
-        {
-            Student student = _context.Students.FirstOrDefault(x => x.Name == name);
-            return student;
-        }
-
-        // * retorna o estudante pelo id
-        public Student GetStudentById(int id)
-        {
-            Student student = _context.Students.Find(id);
-            return student;
-        }
-
-        // * retorna todos os estudantes registrados
-        public List<StudentResponse> GetAllStudents()
-        {
-            var listStudents = new List<StudentResponse>();
-            var students = _context.Students.ToList();
-
-            foreach (Student student in students)
-            {
-                listStudents.Add(new StudentResponse
-                {
-                    StudentId = student.StudentId,
-                    Name = student.Name,
-                    Email = student.Email,
-                    Status = student.Status
-                });
-            }
-
-            return listStudents;
+            Post LastPost = _context.Posts.Where(x => x.StudentId == studentid).OrderByDescending(x => x.PostId).FirstOrDefault();
+            return LastPost;
         }
     }
 }
