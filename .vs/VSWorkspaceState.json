@@ -1,7 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\tryitter",
+    "\\src\\tryitter\\Controllers",
+    "\\src\\tryitter\\Entities",
+    "\\src\\tryitter\\Migrations",
+    "\\src\\tryitter\\Models",
+    "\\src\\tryitter\\Repository",
+    "\\src\\tryitter\\Services"
   ],
-  "SelectedNode": "\\C:\\Users\\joaocla\\Source\\Repos\\Tryitter",
+  "SelectedNode": "\\src\\tryitter\\Models\\Post.cs",
   "PreviewInSolutionExplorer": false
 }
