@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\src",
-    "\\src\\tryitter",
-    "\\src\\tryitter\\Controllers",
-    "\\src\\tryitter\\Models",
-    "\\src\\tryitter\\Repository"
+    ""
   ],
-  "SelectedNode": "\\src\\tryitter",
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }

@@ -40,12 +40,5 @@ namespace tryitter.Repository
             posts = _context.Posts.Where(x => x.StudentId == studentid).ToList();
             return posts;
         }
-
-        // * Lista o ultimo post de um aluno procurando pelo Id
-        public Post GetLastPost(int studentid)
-        {
-            Post LastPost = _context.Posts.Where(x => x.StudentId == studentid).OrderByDescending(x => x.PostId).FirstOrDefault();
-            return LastPost;
-        }
     }
 }
