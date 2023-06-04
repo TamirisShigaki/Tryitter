@@ -33,7 +33,7 @@ namespace tryitter.Repository
             };
             _context.Students.Add(newStudent);
             _context.SaveChanges();
-            return "student created";
+            return "Student created";
         }
 
         // * Loga com um estudante e retorna o token
@@ -89,7 +89,7 @@ namespace tryitter.Repository
             _context.Students.Remove(student);
             _context.Posts.RemoveRange(posts);
             _context.SaveChanges();
-            return "student remove";
+            return "Student remove";
         }
 
         // * retorna o estudante pelo nome
