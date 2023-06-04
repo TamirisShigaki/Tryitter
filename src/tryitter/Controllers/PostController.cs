@@ -42,5 +42,16 @@ namespace tryitter.Controllers
             }
             return BadRequest(response);
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeletePostById(int id)
+        {
+            string response = _repository.DeletePost(id);
+            if(response == "post deleted")
+            {
+                return NoContent();
+            }
+            return BadRequest(response);
+        }
     }
 }
