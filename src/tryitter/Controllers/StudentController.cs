@@ -11,6 +11,7 @@ namespace tryitter.Controllers;
 [Route("[controller]")]
 public class StudentController : ControllerBase
 {
+    private const string ErrorStudentNotFound = "Student not found";
     private readonly StudentRepository _repository;
 
     public StudentController(StudentRepository repository)
@@ -22,7 +23,11 @@ public class StudentController : ControllerBase
     public IActionResult CreateStudent(Student student)
     {
         var response = _repository.AddStudent(student);
-        if (response == "Email already exists") return BadRequest(response);
+        if (response == "Email already exists")
+        {
+            return BadRequest(response);
+        }
+
         return Ok(response);
     }
 
@@ -43,7 +48,16 @@ public class StudentController : ControllerBase
     public IActionResult UpdateStudent(int id, Student student)
     {
         var response = _repository.UpdateStudent(id, student);
-        if (response == "Email already exists") return BadRequest(response);
+        if (response == "Student not found")
+        {
+            return BadRequest(response);
+        }
+
+        if (response == "Email already exists")
+        {
+            return BadRequest(response);
+        }
+
         return Ok(response);
     }
 
@@ -54,7 +68,7 @@ public class StudentController : ControllerBase
     {
         if (_repository.GetStudentById(id) == null)
         {
-            return BadRequest("student not found");
+            return BadRequest(ErrorStudentNotFound);
         }
 
         var student = _repository.GetStudentById(id);
@@ -66,19 +80,19 @@ public class StudentController : ControllerBase
     public IActionResult GetStudent(int id)
     {
         var student = _repository.GetStudentById(id);
-        if (student != null)
+        if (student == null)
         {
-            var studentResult = new StudentResponse
-            {
-                StudentId = student.StudentId,
-                Name = student.Name,
-                Email = student.Email,
-                Status = student.Status,
-            };
-            return Ok(studentResult);
+            return BadRequest(ErrorStudentNotFound);
         }
 
-        return BadRequest("student not found");
+        var studentResult = new StudentResponse
+        {
+            StudentId = student.StudentId,
+            Name = student.Name,
+            Email = student.Email,
+            Status = student.Status,
+        };
+        return Ok(studentResult);
     }
 
     [HttpGet("Name")]
@@ -99,7 +113,7 @@ public class StudentController : ControllerBase
             return Ok(studentResult);
         }
 
-        return BadRequest("student not found");
+        return BadRequest(ErrorStudentNotFound);
     }
 
     [HttpGet]

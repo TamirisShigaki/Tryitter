@@ -57,6 +57,11 @@ namespace tryitter.Repository
         public string UpdateStudent(int id, Student studentInput)
         {
             var currentStateofStudent = _context.Students.AsNoTracking().Where(c => c.StudentId == id).FirstOrDefault();
+            if (currentStateofStudent == null)
+            {
+                return "Student not found";
+            }
+
             var hasStudantWithThisEmail = _context.Students.AsNoTracking().Where(c => c.Email == studentInput.Email).FirstOrDefault();
 
             if (currentStateofStudent.Email != studentInput.Email && hasStudantWithThisEmail != null)

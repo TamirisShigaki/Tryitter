@@ -19,7 +19,7 @@ namespace tryitter.Repository
 
         // * Cria um novo post
         public string AddPost(Post postInput)
-        {       
+        {
             var newPost = new Post
             {
                 Content = postInput.Content,
@@ -58,7 +58,7 @@ namespace tryitter.Repository
         public string DeletePost(int id)
         {
             Post dbPost = _context.Posts.Where(x => x.PostId == id).FirstOrDefault();
-            if(dbPost != null)
+            if (dbPost != null)
             {
                 _context.Posts.Remove(dbPost);
                 _context.SaveChanges();
