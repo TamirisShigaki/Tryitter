@@ -19,7 +19,7 @@ namespace tryitter.Repository
 
         // * Cria um novo post
         public string AddPost(Post postInput)
-        {       
+        {
             var newPost = new Post
             {
                 Content = postInput.Content,
@@ -38,6 +38,13 @@ namespace tryitter.Repository
         {
             List<Post> posts = new List<Post>();
             posts = _context.Posts.Where(x => x.StudentId == studentid).ToList();
+            return posts;
+        }
+
+        public IEnumerable<Post> GetAllPostsByStudentName(string name)
+        {
+            List<Post> posts = new List<Post>();
+            posts = _context.Posts.Where(x => x.StudentName == name).ToList();
             return posts;
         }
 

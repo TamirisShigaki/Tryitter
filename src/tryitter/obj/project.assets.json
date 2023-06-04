@@ -4426,19 +4426,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jccla\\.nuget\\packages\\": {}
+    "C:\\Users\\joaocla\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj",
+      "projectUniqueName": "C:\\Users\\joaocla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj",
       "projectName": "tryitter",
-      "projectPath": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj",
-      "packagesPath": "C:\\Users\\jccla\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\obj\\",
+      "projectPath": "C:\\Users\\joaocla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj",
+      "packagesPath": "C:\\Users\\joaocla\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joaocla\\source\\repos\\Tryitter\\src\\tryitter\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jccla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joaocla\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4446,6 +4446,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4522,7 +4523,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

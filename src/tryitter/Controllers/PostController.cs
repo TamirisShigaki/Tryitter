@@ -15,14 +15,14 @@ namespace tryitter.Controllers
             _repository = repository;
         }
 
-        [HttpPost("/Posts")]
+        [HttpPost("/CreatePost")]
         public IActionResult CreatePost(Post post)
         {
             var response = _repository.AddPost(post);
             return Ok(response);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("/SearchPostById/{id}")]
         public IActionResult GetPostsByStudentId(int id, bool last)
         {
             var response = _repository.GetAllPostsByStudentId(id);
@@ -31,7 +31,16 @@ namespace tryitter.Controllers
             return Ok(response);
         }
 
-        [HttpPut("{id}")]
+        [HttpGet("/SearchPostByName/{id}")]
+        public IActionResult GetPostsByStudentName(string name, bool last)
+        {
+            var response = _repository.GetAllPostsByStudentName(name);
+            if (response.Count() == 0) return NotFound();
+            if (last) return Ok(response.OrderByDescending(x => x.PostId).FirstOrDefault());
+            return Ok(response);
+        }
+
+        [HttpPut("/UpdatePost/{id}")]
         public IActionResult UpdatePostById(int id, Post post)
         {
             post.PostId = id;
@@ -43,7 +52,7 @@ namespace tryitter.Controllers
             return BadRequest(response);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("/DeletePost/{id}")]
         public IActionResult DeletePostById(int id)
         {
             string response = _repository.DeletePost(id);
