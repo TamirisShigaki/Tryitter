@@ -54,5 +54,17 @@ namespace tryitter.Repository
             }
             return "post not found";
         }
+
+        public string DeletePost(int id)
+        {
+            Post dbPost = _context.Posts.Where(x => x.PostId == id).FirstOrDefault();
+            if(dbPost != null)
+            {
+                _context.Posts.Remove(dbPost);
+                _context.SaveChanges();
+                return "post deleted";
+            }
+            return "post not found";
+        }
     }
 }
