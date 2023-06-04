@@ -40,5 +40,18 @@ namespace tryitter.Repository
             posts = _context.Posts.Where(x => x.StudentId == studentid).ToList();
             return posts;
         }
+
+        public string UpdatePost(Post inputpost)
+        {
+            Post dbPost = _context.Posts.Where(x => x.PostId == inputpost.PostId).FirstOrDefault();
+            if (dbPost != null)
+            {
+                dbPost.Content = inputpost.Content;
+                dbPost.UpdatetAt = DateTime.Now;
+                _context.SaveChanges();
+                return "post updated";
+            }
+            return "post not found";
+        }
     }
 }
