@@ -1,0 +1,16 @@
+{
+    "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+    "settings": {
+    "documentationRules": {
+        "companyName": "YourCompanyName",
+        "copyrightText": "Copyright (c) YourCompanyName. All rights reserved.",
+        "xmlHeader": false
+    },
+    "namingRules": {
+        "allowedHungarianPrefixes": []
+    },
+    "orderingRules": {
+        "usingDirectivesPlacement": "outsideNamespace"
+    }
+    }
+}
