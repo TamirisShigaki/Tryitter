@@ -33,74 +33,15 @@ Tryitter é uma rede social,  totalmente baseada em texto.
 
   * <a href="https://www.microsoft.com/pt-br/sql-server/sql-server-downloads" target="_blank" rel="external"><span><strong>SQL Server</strong></span></a> - Banco de Dados.
 
-  * <a href="https://fluentassertions.com/" target="_blank" rel="external"><span><strong>Teste</strong></span></a> - Ferramenta de construção de testes.
+  * <a href="https://fluentassertions.com/" target="_blank" rel="external"><span><strong>FluentAssertions</strong></span></a> - Ferramenta de construção de testes.
 
-  * <a href="https://xunit.net/" target="_blank" rel="external"><span><strong>Teste</strong></span></a> - Ferramenta de construção de testes.
+  * <a href="https://xunit.net/" target="_blank" rel="external"><span><strong>XUnit</strong></span></a> - Ferramenta de construção de testes.
 
   * <a href="https://azure.microsoft.com/pt-br/" target="_blank" rel="external"><span><strong>Azure</strong></span></a> - Ferramenta de deploy.
 
   * <a href="https://www.nuget.org/packages/StyleCop.Analyzers/" target="_blank" rel="external"><span><strong>StyleCop analyzers</strong></span></a> - Mantém um padrão de código na aplicação (Lint).
 
-<br />
 
-## 📝 Documentação da API
-<br />
-
-<details>
-<summary><strong>Students</strong></summary><br/>
-
-```
-  GET /Students 
-```
- ```
-  GET /Student/:id
-```
-```
-  GET /Student/Name/
-```
-```
-  POST /Student
-```
-| Parâmetro   | Tipo       | Descrição                           |
-| :---------- | :--------- | :---------------------------------- |
-| `name` | `string` | Nome - estudante. (Obrigatório) |
-| `email` | `string` | Email - estudante. (Obrigatório) |
-| `Password` | `number` | Senha - conta criada. (Obrigatório) |
-| `status` | `number` | Status - estudante. (Obrigatório) |
-
-```
-  POST /Login 
-```
-| Parâmetro   | Tipo       | Descrição                           |
-| :---------- | :--------- | :---------------------------------- |
-| `email` | `string` | Email. (Obrigatório) |
-| `password` | `string` | Senha. (Obrigatório) |
-| ` Authorization`      | `string` | Token do login deve ser passado no header. (Obrigatório) |
-
-:exclamation::exclamation: Retorna Token 
-
-```
-  PATCH /Student/:id
-```
-| Parâmetro   | Tipo       | Descrição                           |
-| :---------- | :--------- | :---------------------------------- |
-| `name` | `string` | Nome - estudante. (Obrigatório) |
-| `email` | `string` | Email - estudante. (Obrigatório) |
-| `password` | `number` | Senha - conta criada. (Obrigatório) |
-| `status` | `number` |   status - estudante. (Obrigatório) |
-| ` Authorization`      | `string` | Token do login deve ser passado no header. (Obrigatório) |
-
-```
-  DELETE/Student/:id
-```
-| Parâmetro   | Tipo       | Descrição                           |
-| :---------- | :--------- | :---------------------------------- |
-| `Authorization`      | `string` | Token do login deve ser passado no header. (Obrigatório) |
-
-
-⚠️ Ao deletar um estudante todos os seus post criados são deletados.
-
-</details>
 <br />
 
 ## ⚙️ **Como iniciar o projeto localmente**
@@ -145,7 +86,91 @@ dotnet test
 <br />
 
 
+## 📝 Documentação da API
+<br />
+
+<details>
+<summary><strong>Students</strong></summary><br/>
+
+```
+  GET /Students 
+```
+ ```
+  GET /Student/:id
+```
+```
+  GET /Student/Name/
+```
+```
+  POST /Student
+```
+```
+  POST /Login 
+```
+```
+  PATCH /Student/:id
+```
+```
+  DELETE/Student/:id
+```
+⚠️ Ao deletar um estudante todos os seus post criados são deletados.
+
+</details>
+
+<br /> 
+</details>
+
+<details>
+<summary><strong>Posts</strong></summary><br/>
+
+```
+  GET /Post
+```
+```
+  GET /Post/:id
+```
+```
+  GET /Post/Student/:id
+```
+```
+  GET /Post/Last/Student/:id
+```
+```
+  GET /Post/StudentName
+```
+```
+  /Post/Last/StudentName
+```
+```
+  POST /Post
+```
+```
+  PUT /Post/:id 
+```
+```
+  DELETE /Post/:id 
+```
+
+</details>
+
+<br/>
+
+<!-- ## 🏗️ **Deploy**
+
+O deploy da aplicação foi executado utilizando o Microsoft Azure
+<br />
+
+Os links do deploy são:
+<br />
+
+### Backend
+`inserir link`
+<br /> -->
+
+
 ## 🧑‍💻 Projeto Desenvolvido por:
 <br/>
 
-
+<img src='https://avatars.githubusercontent.com/u/94326866?s=400&u=652728bc4a5ec9965b9bd2e6cb591f6005647c49&v=4' width='100' />|<img src='https://avatars.githubusercontent.com/u/74563015?v=4' width='100' />
+:-:|:-:
+[Tamiris Shigaki](https://www.linkedin.com/in/tamirisshigaki/)|[João Claudio](https://github.com/joaocla)
