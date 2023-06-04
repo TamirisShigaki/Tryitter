@@ -30,5 +30,17 @@ namespace tryitter.Controllers
             if (last) return Ok(response.OrderByDescending(x => x.PostId).FirstOrDefault());
             return Ok(response);
         }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdatePostById(int id, Post post)
+        {
+            post.PostId = id;
+            string response = _repository.UpdatePost(post);
+            if(response == "post updated")
+            {
+                return NoContent();
+            }
+            return BadRequest(response);
+        }
     }
 }

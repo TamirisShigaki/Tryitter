@@ -48,6 +48,7 @@ namespace tryitter.Repository
             {
                 dbPost.Content = inputpost.Content;
                 dbPost.UpdatetAt = DateTime.Now;
+                dbPost.Image = inputpost.Image;
                 _context.SaveChanges();
                 return "post updated";
             }
