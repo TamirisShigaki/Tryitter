@@ -1,5 +1,3 @@
-using Xunit;
-using FluentAssertions;
 using System.Net.Http.Headers;
 using System.Text;
 using tryitter.Services;
