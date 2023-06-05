@@ -14,7 +14,7 @@ public class Student
 
     public string Status { get; set; } = default!;
 
-    public virtual ICollection<Post>? Posts { get; set; }
+    public virtual ICollection<Post> Posts { get; set; }
 }
 
 // * default! = define o valor inicial da propriedade para o valor padrão do tipo

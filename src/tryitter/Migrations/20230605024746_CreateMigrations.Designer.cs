@@ -12,8 +12,8 @@ using tryitter.Repository;
 namespace tryitter.Migrations
 {
     [DbContext(typeof(TryitterContext))]
-    [Migration("20230603211959_CreateMigrationsAgain")]
-    partial class CreateMigrationsAgain
+    [Migration("20230605024746_CreateMigrations")]
+    partial class CreateMigrations
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -28,7 +28,7 @@ namespace tryitter.Controllers
             return Ok(response);
         }
 
-        [HttpGet("/SearchPostById/{id}")]
+        [HttpGet("/SearchPostByStudentId/{id}")]
         public IActionResult GetPostsByStudentId(int id, bool last)
         {
             var response = _repository.GetAllPostsByStudentId(id);
@@ -37,7 +37,7 @@ namespace tryitter.Controllers
             return Ok(response);
         }
 
-        [HttpGet("/SearchPostByName/{id}")]
+        [HttpGet("/SearchPostByStudentName/{name}")]
         public IActionResult GetPostsByStudentName(string name, bool last)
         {
             var response = _repository.GetAllPostsByStudentName(name);

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace tryitter.Migrations
 {
     /// <inheritdoc />
-    public partial class CreateMigrationsAgain : Migration
+    public partial class CreateMigrations : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

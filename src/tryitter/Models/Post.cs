@@ -19,7 +19,5 @@ public class Post
     [ForeignKey("StudentId")]
     public int StudentId { get; set; }
 
-    [ForeignKey("Name")]
-    public string StudentName { get; set; }
-    public Student Student { get; set; }
+    public virtual Student Student { get; set; }
 }

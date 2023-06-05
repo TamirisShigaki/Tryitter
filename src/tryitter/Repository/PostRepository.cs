@@ -20,6 +20,12 @@ namespace tryitter.Repository
         // * Cria um novo post
         public string AddPost(Post postInput)
         {
+            Student student = _context.Students.Where(x => x.StudentId == postInput.StudentId).FirstOrDefault();
+
+            if(student == null)
+            {
+                return "Student not found";
+            }
             var newPost = new Post
             {
                 Content = postInput.Content,
@@ -34,17 +40,36 @@ namespace tryitter.Repository
         }
 
         // * Lista todos os posts de um aluno procurando pelo Id
-        public IEnumerable<Post> GetAllPostsByStudentId(int studentid)
+        public IEnumerable<PostVO> GetAllPostsByStudentId(int studentid)
         {
-            List<Post> posts = new List<Post>();
-            posts = _context.Posts.Where(x => x.StudentId == studentid).ToList();
+            List<PostVO> posts = new List<PostVO>();
+            posts = _context.Posts.Where(x => x.StudentId == studentid).Select(a => new PostVO()
+            {
+                Content = a.Content,
+                CreatAt = a.CreatAt,
+                PostId = a.PostId,
+                Image = a.Image,
+                UpdatetAt = a.UpdatetAt,
+                StudentId = a.StudentId,
+                StudentName = a.Student.Name
+            }).ToList();
+
             return posts;
         }
 
-        public IEnumerable<Post> GetAllPostsByStudentName(string name)
+        public IEnumerable<PostVO> GetAllPostsByStudentName(string name)
         {
-            List<Post> posts = new List<Post>();
-            posts = _context.Posts.Where(x => x.StudentName == name).ToList();
+            List<PostVO> posts = new List<PostVO>();
+            posts = _context.Posts.Where(x => x.Student.Name == name).Select(a => new PostVO()
+            {
+                Content = a.Content,
+                CreatAt = a.CreatAt,
+                PostId = a.PostId,
+                Image = a.Image,
+                UpdatetAt = a.UpdatetAt,
+                StudentId = a.StudentId,
+                StudentName = a.Student.Name
+            }).ToList();
             return posts;
         }
 
@@ -74,9 +99,18 @@ namespace tryitter.Repository
             return "post not found";
         }
 
-        public IEnumerable<Post> GetAllPosts()
+        public IEnumerable<PostVO> GetAllPosts()
         {
-            return _context.Posts.ToList();
+            return _context.Posts.Select(x => new PostVO()
+            {
+                Content = x.Content,
+                CreatAt = x.CreatAt,
+                PostId = x.PostId,
+                Image = x.Image,
+                UpdatetAt = x.UpdatetAt,
+                StudentId = x.StudentId,
+                StudentName = x.Student.Name
+            }).ToList();
         }
     }
 }
