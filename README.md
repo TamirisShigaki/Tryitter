@@ -70,6 +70,10 @@ dotnet run
 <br /> 
 
 ## 🧪 **Execução dos Testes**
+<!-- <br /> 
+
+<details>
+<summary><strong>Todos os Testes</strong></summary><br/>
 
 Para rodar todos os testes da aplicação, entre na pasta de testes `src/triytter.Test` 
 
@@ -82,13 +86,47 @@ E execute o seguinte comando: (Isso irá executar os testes de uma única vez.)
 ```sh
 dotnet test
 ```
+</details>
+<br />
+
+<details>
+<summary><strong>Testes de Cobertura</strong></summary><br/>
+
+Na pasta dos testes ```cd src/triytter.Test``` rode o comando:
+
+```
+dotnet test --collect:"XPlat Code Coverage" --settings coverlet.runsettings 
+```
+
+Resultados da cobertura no formato HTML, instale o reportgenerator-globaltool com o seguinte comando:
+
+```
+dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
+```
+
+Depois de instalar o reportgenerator-globaltool, rode o seguinte comando na pasta criada pelo Code Coverage para armazenar os resultados:
+
+```
+reportgenerator "-reports:coverage.cobertura.xml" "-targetdir:coveragereport" -reporttypes:Html
+```
+
+Visualize os resultados do arquivo ```index.html``` no navegador:
+
+### **Cobertura dos testes**
+O testes deste projeto contemplaram uma cobertura de __________ da linhas.<br>
+As linhas não cobertas tratam de linhas de configurações. -->
+
+</details>
 
 <br />
 
 
-## 📝 Documentação da API
-<br />
+## 📝 **Documentação da API**
 
+Para saber mais, acesse a documentação:
+<a href="http://localhost:5143/Swagger/index.html" target="_blank" rel="external"><span><strong>Documentação Swagger</strong></span></a>
+
+<br />
 <details>
 <summary><strong>Students</strong></summary><br/>
 
@@ -121,7 +159,8 @@ dotnet test
 </details>
 
 <details>
-<summary><strong>Posts</strong></summary><br/>
+<summary><strong>Posts</strong></summary>
+<br/>
 
 ```
   GET /Post
@@ -150,7 +189,6 @@ dotnet test
 ```
   DELETE /Post/:id 
 ```
-
 </details>
 
 <br/>
