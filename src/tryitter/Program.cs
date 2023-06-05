@@ -44,7 +44,11 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(doc =>
+    {
+        doc.SwaggerEndpoint("/Swagger/v1/Swagger.json", "Tryitter v1");
+        doc.RoutePrefix = string.Empty;
+    });
 }
 
 app.UseRouting();
