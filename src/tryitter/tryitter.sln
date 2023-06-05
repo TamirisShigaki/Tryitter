@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.5.33516.290
+VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tryitter", "tryitter.csproj", "{93B9C0E0-88E5-44A4-8A6B-814F320ABBBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tryitter", "tryitter.csproj", "{49D525C8-BE9D-483E-9B72-318715C44148}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{93B9C0E0-88E5-44A4-8A6B-814F320ABBBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93B9C0E0-88E5-44A4-8A6B-814F320ABBBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93B9C0E0-88E5-44A4-8A6B-814F320ABBBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93B9C0E0-88E5-44A4-8A6B-814F320ABBBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D525C8-BE9D-483E-9B72-318715C44148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D525C8-BE9D-483E-9B72-318715C44148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D525C8-BE9D-483E-9B72-318715C44148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49D525C8-BE9D-483E-9B72-318715C44148}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3B443E76-35D5-4CC4-AACF-A31CF11FD86A}
+		SolutionGuid = {F309CD63-435D-4890-9A9D-1AAF22E83404}
 	EndGlobalSection
 EndGlobal
