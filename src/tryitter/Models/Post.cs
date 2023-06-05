@@ -19,7 +19,7 @@ public class Post
     [ForeignKey("StudentId")]
     public int StudentId { get; set; }
 
-    [ForeignKey("StundentName")]
+    [ForeignKey("Name")]
     public string StudentName { get; set; }
     public Student Student { get; set; }
 }

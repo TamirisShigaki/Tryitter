@@ -73,5 +73,10 @@ namespace tryitter.Repository
             }
             return "post not found";
         }
+
+        public IEnumerable<Post> GetAllPosts()
+        {
+            return _context.Posts.ToList();
+        }
     }
 }

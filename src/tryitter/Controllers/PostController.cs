@@ -15,6 +15,12 @@ namespace tryitter.Controllers
             _repository = repository;
         }
 
+        [HttpGet("/Posts")]
+        public IActionResult GetAllPosts()
+        {
+            return Ok(_repository.GetAllPosts());
+        }
+
         [HttpPost("/CreatePost")]
         public IActionResult CreatePost(Post post)
         {
