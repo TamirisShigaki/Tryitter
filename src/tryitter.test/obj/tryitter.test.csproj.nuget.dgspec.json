@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter.test\\tryitter.test.csproj": {}
+    "C:\\Users\\joaocla\\source\\repos\\Tryitter\\src\\tryitter.test\\tryitter.test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter.test\\tryitter.test.csproj": {
+    "C:\\Users\\joaocla\\source\\repos\\Tryitter\\src\\tryitter.test\\tryitter.test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter.test\\tryitter.test.csproj",
+        "projectUniqueName": "C:\\Users\\joaocla\\source\\repos\\Tryitter\\src\\tryitter.test\\tryitter.test.csproj",
         "projectName": "tryitter.test",
-        "projectPath": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter.test\\tryitter.test.csproj",
-        "packagesPath": "C:\\Users\\jccla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter.test\\obj\\",
+        "projectPath": "C:\\Users\\joaocla\\source\\repos\\Tryitter\\src\\tryitter.test\\tryitter.test.csproj",
+        "packagesPath": "C:\\Users\\joaocla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joaocla\\source\\repos\\Tryitter\\src\\tryitter.test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jccla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joaocla\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj": {
-                "projectPath": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj"
+              "C:\\Users\\joaocla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj": {
+                "projectPath": "C:\\Users\\joaocla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj"
               }
             }
           }
@@ -58,13 +58,13 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[6.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[6.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
@@ -72,13 +72,13 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[6.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[6.0.6, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -121,21 +121,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj": {
+    "C:\\Users\\joaocla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj",
+        "projectUniqueName": "C:\\Users\\joaocla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj",
         "projectName": "tryitter",
-        "projectPath": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj",
-        "packagesPath": "C:\\Users\\jccla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\obj\\",
+        "projectPath": "C:\\Users\\joaocla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj",
+        "packagesPath": "C:\\Users\\joaocla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joaocla\\source\\repos\\Tryitter\\src\\tryitter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jccla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joaocla\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -143,6 +143,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -171,17 +172,17 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[6.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[6.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[6.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -219,7 +220,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

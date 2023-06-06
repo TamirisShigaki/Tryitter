@@ -19,10 +19,8 @@ namespace tryitter.Repository
         public string AddStudent(Student studentInput)
         {
             Student studentDB = _context.Students.AsNoTracking().Where(c => c.Email == studentInput.Email).FirstOrDefault();
-            if (studentDB != null)
-            {
-                return "Email already exists";
-            }
+
+            if (studentDB != null) return "Email already exists";
 
             var newStudent = new Student
             {

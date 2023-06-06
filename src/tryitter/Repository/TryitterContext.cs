@@ -9,13 +9,18 @@ public class TryitterContext : DbContext
 
     public DbSet<Student>? Students { get; set; }
 
+    public TryitterContext(DbContextOptions<TryitterContext> options)
+      : base(options) { }
+
+    public TryitterContext() { }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
         {
             var connectionString = Environment.GetEnvironmentVariable("DOTNET_CONNECTION_STRING");
             
-            optionsBuilder.UseSqlServer(@"Server = localhost; Database = TryitterDB; User = sa; Password = sanaminamomo123; TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer(@"Server = localhost; Database = TryitterDB; User = sa; Password = 1234; TrustServerCertificate=True");
         }
     }
 

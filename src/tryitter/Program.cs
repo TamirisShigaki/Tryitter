@@ -5,6 +5,7 @@ using tryitter.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using tryitter.Repository;
+using tryitter.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
