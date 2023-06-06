@@ -12,11 +12,8 @@ builder.Services.AddControllers();
 
 builder.Services.AddScoped<TryitterContext>();
 builder.Services.AddScoped<StudentRepository>();
-<<<<<<< HEAD
-// builder.Services.AddScoped<PostRepository>();
-=======
 builder.Services.AddScoped<PostRepository>();
->>>>>>> 09207d47446b3c226ff021d6ba94c215c21c3c3c
+builder.Services.AddScoped<PostRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAuthentication(options =>

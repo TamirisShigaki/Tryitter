@@ -4,6 +4,8 @@ using tryitter.Models;
 using tryitter.Repository;
 using tryitter.Entities;
 using System.Text.Json;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace tryitter.Controllers;
 
@@ -44,36 +46,27 @@ public class StudentController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    [Authorize]
     public IActionResult UpdateStudent(int id, Student student)
     {
-        var response = _repository.UpdateStudent(id, student);
-        if (response == "Student not found")
+        student.StudentId = id;
+        string response = _repository.UpdateStudent(student);
+        if(response == "student updated")
         {
-            return BadRequest(response);
+            return NoContent();
         }
-
-        if (response == "Email already exists")
-        {
-            return BadRequest(response);
-        }
-
-        return Ok(response);
+        return BadRequest(response);
     }
 
     [HttpDelete("{id}")]
-    [Authorize]
 
     public IActionResult DeleteStudent(int id)
     {
-        if (_repository.GetStudentById(id) == null)
+        string response = _repository.DeleteStudent(id);
+        if (response == "student deleted")
         {
-            return BadRequest(ErrorStudentNotFound);
+            return NoContent();
         }
-
-        var student = _repository.GetStudentById(id);
-        var response = _repository.DeleteStudent(student);
-        return Ok(response);
+        return BadRequest(response);
     }
 
     [HttpGet("{id}")]
@@ -96,11 +89,9 @@ public class StudentController : ControllerBase
     }
 
     [HttpGet("Name")]
-    public IActionResult GetStudent([FromBody] JsonElement name)
+    public IActionResult GetStudent(string name)
     {
-        string jsonBody = JsonSerializer.Serialize(name);
-        var stringsStudentName = jsonBody.Split('"');
-        var student = _repository.GetStudent(stringsStudentName[3]);
+        var student = _repository.GetStudent(name);
         if (student != null)
         {
             var studentResult = new StudentResponse

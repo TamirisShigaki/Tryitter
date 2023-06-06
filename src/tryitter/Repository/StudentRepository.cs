@@ -53,43 +53,35 @@ namespace tryitter.Repository
             return "Student not found";
         }
 
-        // * Depois de verificar se o e-mail informado não existe no DB. E se o estudante se o estudante que esta sendo atualizado for o mesmo, atualiza o cadastro do estudante
-        public string UpdateStudent(int id, Student studentInput)
+        public string UpdateStudent(Student studentInput)
         {
-            var currentStateofStudent = _context.Students.AsNoTracking().Where(c => c.StudentId == id).FirstOrDefault();
-            if (currentStateofStudent == null)
+            Student dbStudent = _context.Students.Where(x => x.StudentId == studentInput.StudentId).FirstOrDefault();
+            if(studentInput.Email == dbStudent.Email)
             {
-                return "Student not found";
+                return "email alredy exist";
             }
-
-            var hasStudantWithThisEmail = _context.Students.AsNoTracking().Where(c => c.Email == studentInput.Email).FirstOrDefault();
-
-            if (currentStateofStudent.Email != studentInput.Email && hasStudantWithThisEmail != null)
+            if(dbStudent != null)
             {
-                return "Email already exists";
+                dbStudent.Email = studentInput.Email;
+                dbStudent.Name = studentInput.Name;
+                dbStudent.Status = studentInput.Status;
+                _context.SaveChanges();
+                return "student updated";
             }
-
-            var student = new Student
-            {
-                StudentId = id,
-                Name = studentInput.Name,
-                Email = studentInput.Email,
-                Status = studentInput.Status,
-                Password = new Hash(SHA512.Create()).CriptografarSenha(studentInput.Password),
-            };
-            _context.Students.Update(student);
-            _context.SaveChanges();
-            return "Student updated";
+            return "student not found";
         }
 
         // *  exclui o estudante e post relacionados (Cascate)
-        public string DeleteStudent(Student student)
+        public string DeleteStudent(int id)
         {
-            var posts = _context.Posts.Where(p => p.StudentId == student.StudentId);
-            _context.Students.Remove(student);
-            _context.Posts.RemoveRange(posts);
-            _context.SaveChanges();
-            return "Student remove";
+            Student dbstudent = _context.Students.Where(x => x.StudentId == id).FirstOrDefault();
+            if(dbstudent != null)
+            {
+                _context.Students.Remove(dbstudent);
+                _context.SaveChanges();
+                return "student deleted";
+            }
+            return "student not found";
         }
 
         // * retorna o estudante pelo nome

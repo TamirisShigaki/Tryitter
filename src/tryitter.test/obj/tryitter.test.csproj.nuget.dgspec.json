@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter.test/tryitter.test.csproj": {}
+    "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter.test\\tryitter.test.csproj": {}
   },
   "projects": {
-    "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter.test/tryitter.test.csproj": {
+    "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter.test\\tryitter.test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter.test/tryitter.test.csproj",
+        "projectUniqueName": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter.test\\tryitter.test.csproj",
         "projectName": "tryitter.test",
-        "projectPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter.test/tryitter.test.csproj",
-        "packagesPath": "/home/shigaki/.nuget/packages/",
-        "outputPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter.test/obj/",
+        "projectPath": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter.test\\tryitter.test.csproj",
+        "packagesPath": "C:\\Users\\jccla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter.test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/shigaki/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\jccla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/tryitter.csproj": {
-                "projectPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/tryitter.csproj"
+              "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj": {
+                "projectPath": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj"
               }
             }
           }
@@ -119,26 +121,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/tryitter.csproj": {
+    "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/tryitter.csproj",
+        "projectUniqueName": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj",
         "projectName": "tryitter",
-        "projectPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/tryitter.csproj",
-        "packagesPath": "/home/shigaki/.nuget/packages/",
-        "outputPath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/obj/",
+        "projectPath": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj",
+        "packagesPath": "C:\\Users\\jccla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/shigaki/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\jccla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -215,7 +219,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
