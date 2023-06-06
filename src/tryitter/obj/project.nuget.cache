@@ -1,14 +1,21 @@
 {
   "version": 2,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dgSpecHash": "6jdct/zxSJqBmZROk8ErKoioxIPbbKAaY2dc1UMyMRuxYsHxSjXtokl5Y5/e5uPGdsN1s/5sjoDgF2T3qX5r1Q==",
 =======
   "dgSpecHash": "6D+mxGq08aMi5hzioGGdBBGwyywIbVFedtftAUJfa17ayCo+baWysRUZlUHgynb1vBt8IAdYmoitZEST975dkw==",
 >>>>>>> 09207d47446b3c226ff021d6ba94c215c21c3c3c
+=======
+  "dgSpecHash": "J+x2vQMgYtLZtKKt3kcIIDLeQA7oKuHnF2nAYxG5rNyIgpY04o8XC+Gfcxkv9TMix6gAE3jo7qwj8jPYmz9XAg==",
+>>>>>>> 8f107df4e5071ab406d6284ba25ca29194968d26
   "success": true,
-  "projectFilePath": "C:\\Users\\jccla\\source\\repos\\Tryitter\\src\\tryitter\\tryitter.csproj",
+  "projectFilePath": "/home/shigaki/trybe/aceleracaoC#/desafio-projeto/Tryitter/src/tryitter/tryitter.csproj",
   "expectedPackageFiles": [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8f107df4e5071ab406d6284ba25ca29194968d26
     "/home/shigaki/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/home/shigaki/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
     "/home/shigaki/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
@@ -105,6 +112,7 @@
     "/home/shigaki/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
     "/home/shigaki/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/home/shigaki/.nuget/packages/system.windows.extensions/5.0.0/system.windows.extensions.5.0.0.nupkg.sha512"
+<<<<<<< HEAD
 =======
     "C:\\Users\\jccla\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\jccla\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
@@ -203,6 +211,8 @@
     "C:\\Users\\jccla\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\jccla\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
 >>>>>>> 09207d47446b3c226ff021d6ba94c215c21c3c3c
+=======
+>>>>>>> 8f107df4e5071ab406d6284ba25ca29194968d26
   ],
   "logs": []
 }
