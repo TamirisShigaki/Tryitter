@@ -24,6 +24,7 @@ public class StudentController : ControllerBase
     [HttpPost]
     public IActionResult CreateStudent(Student student)
     {
+        if (!string.IsNullOrEmpty(student.Email) && !IsValidEmail(student.Email)) return BadRequest("invalid email format");
         var response = _repository.AddStudent(student);
         if (response == "Email already exists")
         {
@@ -48,6 +49,7 @@ public class StudentController : ControllerBase
     [HttpPut("{id}")]
     public IActionResult UpdateStudent(int id, Student student)
     {
+        if (!string.IsNullOrEmpty(student.Email) && !IsValidEmail(student.Email)) return BadRequest("invalid email format");
         student.StudentId = id;
         string response = _repository.UpdateStudent(student);
         if(response == "student updated")
@@ -112,5 +114,24 @@ public class StudentController : ControllerBase
     {
         var students = _repository.GetAllStudents();
         return Ok(students);
+    }
+
+    bool IsValidEmail(string email)
+    {
+        var trimmedEmail = email.Trim();
+
+        if (trimmedEmail.EndsWith("."))
+        {
+            return false; // suggested by @TK-421
+        }
+        try
+        {
+            var addr = new System.Net.Mail.MailAddress(email);
+            return addr.Address == trimmedEmail;
+        }
+        catch
+        {
+            return false;
+        }
     }
 }

@@ -18,8 +18,8 @@ namespace tryitter.Repository
         // * Cria um novo estudante depois de verificar se não tem aluno com o mesmo e-mail
         public string AddStudent(Student studentInput)
         {
-            Student studentDB = _context.Students.AsNoTracking().Where(c => c.Email == studentInput.Email).FirstOrDefault();
 
+            Student studentDB = _context.Students.AsNoTracking().Where(c => c.Email == studentInput.Email).FirstOrDefault();
             if (studentDB != null) return "Email already exists";
 
             var newStudent = new Student
@@ -40,29 +40,29 @@ namespace tryitter.Repository
             var studentdb = _context.Students.AsNoTracking().Where(c => c.Email == studentLogin.Email).FirstOrDefault();
             if (studentdb == null)
             {
-                return "Student not found";
+                return "User or Password incorrect";
             }
 
-            if (studentdb.Email == studentLogin.Email && new Hash(SHA512.Create()).VerificarSenha(studentLogin.Password, studentdb.Password))
+            if (studentdb.Email != studentLogin.Email || !new Hash(SHA512.Create()).VerificarSenha(studentLogin.Password, studentdb.Password))
             {
-                return new TokenGenerator().Generate(studentdb);
+                return "User or Password incorrect";
             }
 
-            return "Student not found";
+            return new TokenGenerator().Generate(studentdb);
         }
 
         public string UpdateStudent(Student studentInput)
         {
             Student dbStudent = _context.Students.Where(x => x.StudentId == studentInput.StudentId).FirstOrDefault();
-            if(studentInput.Email == dbStudent.Email)
-            {
-                return "email alredy exist";
-            }
+            Student studentDB = _context.Students.AsNoTracking().Where(c => c.Email == studentInput.Email && c.StudentId != studentInput.StudentId && !string.IsNullOrEmpty(studentInput.Email)).FirstOrDefault();
+
+            if (studentDB != null) return "Email already exists";
+
             if(dbStudent != null)
             {
-                dbStudent.Email = studentInput.Email;
-                dbStudent.Name = studentInput.Name;
-                dbStudent.Status = studentInput.Status;
+                dbStudent.Email = !string.IsNullOrEmpty(studentInput.Email) ? studentInput.Email : dbStudent.Email;
+                dbStudent.Name = !string.IsNullOrEmpty(studentInput.Name) ? studentInput.Name : dbStudent.Name;
+                dbStudent.Status = !string.IsNullOrEmpty(studentInput.Status) ? studentInput.Status : dbStudent.Status;
                 _context.SaveChanges();
                 return "student updated";
             }
