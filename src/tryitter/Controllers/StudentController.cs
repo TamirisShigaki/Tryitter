@@ -37,6 +37,7 @@ public class StudentController : ControllerBase
     [HttpPost("/Login")]
     public IActionResult Login(StudentLogin studentlogin)
     {
+        if (!string.IsNullOrEmpty(studentlogin.Email) && !IsValidEmail(studentlogin.Email)) return BadRequest("invalid email format");
         var response = _repository.Login(studentlogin);
         if (response == "Student not found")
         {
