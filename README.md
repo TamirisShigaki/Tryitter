@@ -6,13 +6,14 @@
 
 O objetivo é proporcionar um ambiente em que as pessoas estudantes poderão, por meio de textos e imagens, compartilhar suas experiências e também acessar posts que possam contribuir para seu aprendizado.💚
 
-Tryitter é uma rede social,  totalmente baseada em texto.
+Tryitter é uma rede social, totalmente baseada em texto.
 
 
 <details>
-  <summary><strong>As seguintes regras de negócio foram utilizadas para a construção dessa aplicação</strong></summary><br />
+  <summary><strong>As seguintes regras de negócio foram utilizadas para a construção dessa aplicação</strong></summary>
+  <br />
 
-  * As pessoas estudantes devem conseguir se cadastrar com nome, e-mail, módulo atual que estão estudando, status personalizado e senha para se autenticar.
+  * As pessoas estudantes devem conseguir se cadastrar com nome, e-mail, status personalizado e senha para se autenticar.
   
   * Deve ser possível também alterar essa conta a qualquer momento, desde que a pessoa usuária esteja autenticada.
 
@@ -21,7 +22,6 @@ Tryitter é uma rede social,  totalmente baseada em texto.
   * Além de conseguir pesquisar outras contas por nome e optar por listar todos seus posts ou apenas o último.
 
 </details>
-
 <br />
 
 ## 📑 **Tecnologias utilizadas**
@@ -40,7 +40,6 @@ Tryitter é uma rede social,  totalmente baseada em texto.
   * <a href="https://azure.microsoft.com/pt-br/" target="_blank" rel="external"><span><strong>Azure</strong></span></a> - Ferramenta de deploy.
 
   * <a href="https://www.nuget.org/packages/StyleCop.Analyzers/" target="_blank" rel="external"><span><strong>StyleCop analyzers</strong></span></a> - Mantém um padrão de código na aplicação (Lint).
-
 
 <br />
 
@@ -66,21 +65,19 @@ dotnet restore
 
 dotnet run
 ```
-
 <br /> 
 
 ## 🧪 **Execução dos Testes**
-<!-- <br /> 
+<br /> 
 
 <details>
 <summary><strong>Todos os Testes</strong></summary><br/>
 
-Para rodar todos os testes da aplicação, entre na pasta de testes `src/triytter.Test` 
+Entre na pasta de teste do projeto `src/tryitter.test` e em seguida execute o seguinte comando para fazer a instalação de todas as dependências:
 
 ```sh
-cd src/triytter.Test
+dotnet restore
 ```
-
 E execute o seguinte comando: (Isso irá executar os testes de uma única vez.)
 
 ```sh
@@ -90,43 +87,50 @@ dotnet test
 <br />
 
 <details>
-<summary><strong>Testes de Cobertura</strong></summary><br/>
+<summary><strong>Testes de Cobertura</strong></summary>
+<br/>
 
-Na pasta dos testes ```cd src/triytter.Test``` rode o comando:
-
-```
-dotnet test --collect:"XPlat Code Coverage" --settings coverlet.runsettings 
-```
-
-Resultados da cobertura no formato HTML, instale o reportgenerator-globaltool com o seguinte comando:
+Na pasta dos testes ```cd src/triytter.Test``` rode o comando abaixo para instalar o reportgenerator-globaltool:
 
 ```
 dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
 ```
 
-Depois de instalar o reportgenerator-globaltool, rode o seguinte comando na pasta criada pelo Code Coverage para armazenar os resultados:
+Depois de instalar o reportgenerator-globaltool , rode o seguinte comando para executar os testes:
+```
+dotnet test --collect:"XPlat Code Coverage" --settings coverlet.runsettings 
+```
+Depois de executar os testes, você terá um arquivo de cobertura gerado(geralmente no formato XML). O próximo passo é gerar o relatório de cobertura a partir desses arquivos.
+
+Navegue até o diretório onde os arquivos de cobertura XML estão localizados.
+
+Execute o seguinte comando para gerar o relatório de cobertura usando o ReportGenerator Global Tool (O relatório será gerado no formato HTML.):
 
 ```
 reportgenerator "-reports:coverage.cobertura.xml" "-targetdir:coveragereport" -reporttypes:Html
 ```
-
-Visualize os resultados do arquivo ```index.html``` no navegador:
-
-### **Cobertura dos testes**
-O testes deste projeto contemplaram uma cobertura de __________ da linhas.<br>
-As linhas não cobertas tratam de linhas de configurações. -->
+Após a conclusão do comando acima, você encontrará um diretório chamado "coverage-report" no diretório atual.
+Navegue até o diretório "coverage-report" e abra o arquivo ```index.html``` no navegador para visualizar os resultados.
 
 </details>
+<br />
+
+### **Cobertura dos testes**
+
+O testes deste projeto contemplaram uma cobertura de 49.7% da linhas.
+<br />
+
+![img](src/image/testeTryitter.jpeg)
 
 <br />
 
-
 ## 📝 **Documentação da API**
+<br />
 
 Para saber mais, acesse a documentação:
 <a href="http://localhost:5143/Swagger/index.html" target="_blank" rel="external"><span><strong>Documentação Swagger</strong></span></a>
-
 <br />
+
 <details>
 <summary><strong>Students</strong></summary><br/>
 
@@ -151,12 +155,8 @@ Para saber mais, acesse a documentação:
 ```
   DELETE/Student/:id
 ```
-⚠️ Ao deletar um estudante todos os seus post criados são deletados.
-
 </details>
-
 <br /> 
-</details>
 
 <details>
 <summary><strong>Posts</strong></summary>
@@ -190,21 +190,15 @@ Para saber mais, acesse a documentação:
   DELETE /Post/:id 
 ```
 </details>
-
 <br/>
 
-<!-- ## 🏗️ **Deploy**
+## 🏗️ **Deploy**
+<br/>
 
-O deploy da aplicação foi executado utilizando o Microsoft Azure
+O deploy da aplicação foi executado utilizando o Microsoft Azure:
+<a href="https://project-tryitter.azurewebsites.net/ " target="_blank" rel="external"><span><strong>Link do deploy</strong></span></a>
 <br />
-
-Os links do deploy são:
 <br />
-
-### Backend
-`inserir link`
-<br /> -->
-
 
 ## 🧑‍💻 Projeto Desenvolvido por:
 <br/>
